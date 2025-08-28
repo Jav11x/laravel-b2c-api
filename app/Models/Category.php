@@ -16,6 +16,7 @@ class Category extends Model
     /** Campos asignables en masa desde Request. */
     protected $fillable = ['name'];
 
+
     /** Relación: una categoría tiene muchos productos. */
     public function products()
     {
