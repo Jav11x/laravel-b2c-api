@@ -40,7 +40,7 @@ Route::prefix('products')->group(function () {
     Route::delete('/{id}', [ProductController::class, 'destroy']);
     
     // Rutas para imágenes de productos
-    Route::post('/products/{id}/images', [ProductImageController::class, 'store']);
-    Route::delete('/products/{id}/images/{image_id}', [ProductImageController::class, 'destroy']);
+    Route::post('/{id}/images', [ProductImageController::class, 'store']);
+    Route::delete('/{id}/images/{image_id}', [ProductImageController::class, 'destroy']);
 });
 
