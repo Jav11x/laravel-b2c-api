@@ -39,3 +39,7 @@ Route::prefix('products')->group(function () {
     Route::put('/{id}', [ProductController::class, 'update']);
     Route::delete('/{id}', [ProductController::class, 'destroy']);
 });
+
+// Rutas para imágenes de productos
+Route::post('/products/{id}/images', [ProductImageController::class, 'store']);
+Route::delete('/products/{id}/images/{image_id}', [ProductImageController::class, 'destroy']);
